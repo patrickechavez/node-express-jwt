@@ -1,0 +1,246 @@
+/* google fonts */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 12vh 76vh 12vh;
+      grid-template-rows: 12vh 76vh 12vh;
+      grid-template-areas: "nav" "section" "footer";
+}
+
+.nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  border-radius: 1px solid black;
+  padding: 0 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+
+.nav__item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-index {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+  padding: 0 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content max-content;
+      grid-template-columns: -webkit-min-content -webkit-max-content;
+      grid-template-columns: min-content max-content;
+  grid-column-gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-index__logo {
+  height: 40rem;
+}
+
+.section-smoothies {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+  padding: 1rem 2rem;
+  overflow: auto;
+}
+
+.section-smoothies__img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.section-smoothies__text {
+  color: #444;
+  font-size: 400;
+  font-size: 2rem;
+}
+
+.list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
+.list__list {
+  overflow: auto;
+  background: white;
+}
+
+.list__item {
+  text-align: center;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #aaa;
+}
+
+.h1-header {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.h2-header {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.h3-header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #999;
+}
+
+.h4-header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.btn, .btn:link, .btn:visited {
+  border-radius: 3.6rem;
+  padding: 1.2rem 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+}
+
+.btn--color {
+  background: #fee996;
+  border: none;
+}
+
+.section-signup {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  width: 36rem;
+  margin: 0 auto;
+  padding: 2rem;
+  -webkit-box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background: white;
+  height: 43rem;
+}
+
+.form__input {
+  padding: 1rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #ddd;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.form__label {
+  display: block;
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.form .error {
+  color: #ff0099;
+  margin: 0.5rem 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.mg-top-small {
+  margin-top: 2rem;
+}
+
+.mg-right-small {
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */

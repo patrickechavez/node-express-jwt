@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="container">
+    <nav class="nav">
+      <h1 class="h1-header">
+        <a class="nav__link" href="/">Echavez Smoothies</a>
+      </h1>
+
+      <ul class="nav__list">
+        <% if (user) { %>
+
+        <li class="nav__link">
+          <a class="nav__item btn mg-right-small" href="/"
+            >Welcome <%= user.email %>
+          </a>
+        </li>
+
+        <li class="nav__link">
+          <a class="nav__item btn mg-right-small" href="/logout">LOGOUT</a>
+        </li>
+
+        <% } else {%>
+
+        <li class="nav__link">
+          <a class="nav__item btn mg-right-small" href="/login">LOGIN</a>
+        </li>
+        <li class="nav__link">
+          <a class="nav__item btn btn--color" href="/signup">SIGNUP</a>
+        </li>
+
+        <% } %>
+      </ul>
+    </nav>
+  </body>
+</html>
